@@ -1,0 +1,16 @@
+[
+{
+  "modid": "ncto",
+  "name": "Nuclear Tomorrow",
+  "description": "You must survive a nuclear war and the aftermath.",
+  "version": "1.0",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["L0mb0ss", "AdeptusMoronicus"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

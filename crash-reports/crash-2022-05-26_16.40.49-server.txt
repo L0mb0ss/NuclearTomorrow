@@ -1,0 +1,45 @@
+---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 26/05/22 16:40
+Description: Exception in server tick loop
+
+java.lang.ClassCastException: net.minecraft.world.gen.layer.GenLayerRiverMix cannot be cast to mod.L0mb0ss.NuclearTomorrow.dimensions.realWorld.RealWorldGenLayerBiomes
+	at mod.L0mb0ss.NuclearTomorrow.dimensions.realWorld.RealWorldChunkManager.<init>(RealWorldChunkManager.java:54)
+	at mod.L0mb0ss.NuclearTomorrow.dimensions.realWorld.RealWorldChunkManager.<init>(RealWorldChunkManager.java:59)
+	at mod.L0mb0ss.NuclearTomorrow.dimensions.realWorld.WorldProviderRealWorld.registerWorldChunkManager(WorldProviderRealWorld.java:15)
+	at net.minecraft.world.WorldProvider.registerWorld(WorldProvider.java:54)
+	at net.minecraft.world.World.<init>(World.java:280)
+	at net.minecraft.world.WorldServer.<init>(WorldServer.java:102)
+	at net.minecraft.world.WorldServerMulti.<init>(WorldServerMulti.java:14)
+	at net.minecraft.server.integrated.IntegratedServer.loadAllWorlds(IntegratedServer.java:66)
+	at net.minecraft.server.integrated.IntegratedServer.startServer(IntegratedServer.java:96)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:445)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_331, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 465095936 bytes (443 MB) / 606076928 bytes (578 MB) up to 3803185152 bytes (3627 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 4 mods loaded, 4 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAA	Forge{10.13.4.1614} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAA	ncto{1.0} [Nuclear Tomorrow] (main) 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 0 / 8; []
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

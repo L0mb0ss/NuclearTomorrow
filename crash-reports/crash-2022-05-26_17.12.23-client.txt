@@ -1,0 +1,156 @@
+---- Minecraft Crash Report ----
+// Shall we play a game?
+
+Time: 26/05/22 17:12
+Description: Getting biome
+
+java.lang.NullPointerException: Getting biome
+	at mod.L0mb0ss.NuclearTomorrow.dimensions.realWorld.RealWorldGenLayerBiomes.getInts(RealWorldGenLayerBiomes.java:70)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:23)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:23)
+	at net.minecraft.world.gen.layer.GenLayerBiomeEdge.getInts(GenLayerBiomeEdge.java:21)
+	at net.minecraft.world.gen.layer.GenLayerHills.getInts(GenLayerHills.java:26)
+	at net.minecraft.world.gen.layer.GenLayerRareBiome.getInts(GenLayerRareBiome.java:21)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:23)
+	at net.minecraft.world.gen.layer.GenLayerAddIsland.getInts(GenLayerAddIsland.java:23)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:23)
+	at net.minecraft.world.gen.layer.GenLayerShore.getInts(GenLayerShore.java:23)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:23)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:23)
+	at net.minecraft.world.gen.layer.GenLayerSmooth.getInts(GenLayerSmooth.java:23)
+	at net.minecraft.world.gen.layer.GenLayerRiverMix.getInts(GenLayerRiverMix.java:35)
+	at net.minecraft.world.gen.layer.GenLayerVoronoiZoom.getInts(GenLayerVoronoiZoom.java:25)
+	at mod.L0mb0ss.NuclearTomorrow.dimensions.realWorld.RealWorldChunkManager.getRainfall(RealWorldChunkManager.java:90)
+	at net.minecraft.world.biome.BiomeCache$Block.<init>(BiomeCache.java:107)
+	at net.minecraft.world.biome.BiomeCache.getBiomeCacheBlock(BiomeCache.java:37)
+	at net.minecraft.world.biome.BiomeCache.getBiomeGenAt(BiomeCache.java:51)
+	at mod.L0mb0ss.NuclearTomorrow.dimensions.realWorld.RealWorldChunkManager.getBiomeGenAt(RealWorldChunkManager.java:75)
+	at net.minecraft.world.chunk.Chunk.getBiomeGenForWorldCoords(Chunk.java:1406)
+	at net.minecraft.world.World.getBiomeGenForCoordsBody(World.java:177)
+	at net.minecraft.world.WorldProvider.getBiomeGenForCoords(WorldProvider.java:423)
+	at net.minecraft.world.World.getBiomeGenForCoords(World.java:166)
+	at net.minecraftforge.client.ForgeHooksClient.getSkyBlendColour(ForgeHooksClient.java:407)
+	at net.minecraft.world.World.getSkyColorBody(World.java:1791)
+	at net.minecraft.world.WorldProvider.getSkyColor(WorldProvider.java:457)
+	at net.minecraft.world.World.getSkyColor(World.java:1769)
+	at net.minecraft.client.renderer.EntityRenderer.updateFogColor(EntityRenderer.java:1760)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1230)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1087)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1067)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at mod.L0mb0ss.NuclearTomorrow.dimensions.realWorld.RealWorldGenLayerBiomes.getInts(RealWorldGenLayerBiomes.java:70)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:23)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:23)
+	at net.minecraft.world.gen.layer.GenLayerBiomeEdge.getInts(GenLayerBiomeEdge.java:21)
+	at net.minecraft.world.gen.layer.GenLayerHills.getInts(GenLayerHills.java:26)
+	at net.minecraft.world.gen.layer.GenLayerRareBiome.getInts(GenLayerRareBiome.java:21)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:23)
+	at net.minecraft.world.gen.layer.GenLayerAddIsland.getInts(GenLayerAddIsland.java:23)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:23)
+	at net.minecraft.world.gen.layer.GenLayerShore.getInts(GenLayerShore.java:23)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:23)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:23)
+	at net.minecraft.world.gen.layer.GenLayerSmooth.getInts(GenLayerSmooth.java:23)
+	at net.minecraft.world.gen.layer.GenLayerRiverMix.getInts(GenLayerRiverMix.java:35)
+	at net.minecraft.world.gen.layer.GenLayerVoronoiZoom.getInts(GenLayerVoronoiZoom.java:25)
+	at mod.L0mb0ss.NuclearTomorrow.dimensions.realWorld.RealWorldChunkManager.getRainfall(RealWorldChunkManager.java:90)
+	at net.minecraft.world.biome.BiomeCache$Block.<init>(BiomeCache.java:107)
+	at net.minecraft.world.biome.BiomeCache.getBiomeCacheBlock(BiomeCache.java:37)
+	at net.minecraft.world.biome.BiomeCache.getBiomeGenAt(BiomeCache.java:51)
+	at mod.L0mb0ss.NuclearTomorrow.dimensions.realWorld.RealWorldChunkManager.getBiomeGenAt(RealWorldChunkManager.java:75)
+	at net.minecraft.world.chunk.Chunk.getBiomeGenForWorldCoords(Chunk.java:1406)
+
+-- Coordinates of biome request --
+Details:
+	Location: World: (-18,0,-18), Chunk: (at 14,0,14 in -2,-2; contains blocks -32,0,-32 to -17,255,-17), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+Stacktrace:
+	at net.minecraft.world.World.getBiomeGenForCoordsBody(World.java:177)
+	at net.minecraft.world.WorldProvider.getBiomeGenForCoords(WorldProvider.java:423)
+	at net.minecraft.world.World.getBiomeGenForCoords(World.java:166)
+	at net.minecraftforge.client.ForgeHooksClient.getSkyBlendColour(ForgeHooksClient.java:407)
+	at net.minecraft.world.World.getSkyColorBody(World.java:1791)
+	at net.minecraft.world.WorldProvider.getSkyColor(WorldProvider.java:457)
+	at net.minecraft.world.World.getSkyColor(World.java:1769)
+	at net.minecraft.client.renderer.EntityRenderer.updateFogColor(EntityRenderer.java:1760)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1230)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player575'/162, l='MpServer', x=8.50, y=66.62, z=8.50]]
+	Chunk stats: MultiplayerChunkCache: 0, 0
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-216,64,41), Chunk: (at 8,4,9 in -14,2; contains blocks -224,0,32 to -209,255,47), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 0 game time, 0 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 1 total; [EntityClientPlayerMP['Player575'/162, l='MpServer', x=8.50, y=66.62, z=8.50]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:984)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_331, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 534541616 bytes (509 MB) / 680001536 bytes (648 MB) up to 3803185152 bytes (3627 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 8, tcache: 75, allocated: 4, tallocated: 19
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 4 mods loaded, 4 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1614} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAA	ncto{1.0} [Nuclear Tomorrow] (main) 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 512.59' Renderer: 'NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2'
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 512.59, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)
